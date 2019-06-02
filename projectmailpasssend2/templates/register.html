@@ -1,0 +1,16 @@
+<form action="/saved/" method="post"enctype="multipart/form-data">
+    {% csrf_token %}
+
+<table align="center" border="2">
+    <tr><th><input type="number" name="id" value="{{ auto_id }}"></th></tr>
+    <tr><th><input type="text" name="name" required placeholder="name"></th></tr>
+    <tr><th><input type="number" name="cno" required placeholder="cno" autocomplete="off"></th></tr>
+    <tr><th>gender:<input type="radio" name="gender" value="male">male
+    <input type="radio" name="gender" value="female">female</th></tr>
+    <tr><th><input type="file" name="image" required placeholder="image"></th></tr>
+    <tr><th><input type="email" name="email" required placeholder="email"></th></tr>
+    <tr><th><input type="password" name="password" required placeholder="password" ></th></tr>
+    <tr><th><input type="password" name="password1" required placeholder="re-password" ></th></tr>
+    <tr><th><button type="submit">register</button> </th></tr>
+</table>
+    </form>
